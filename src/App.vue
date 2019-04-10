@@ -1,18 +1,27 @@
 <template>
   <div id="app">
-    <h1>Hello! I'm Timmy the timer</h1>
-    <Timer/>
+    <h1>Stay Focused</h1>
+    <div class='card task'>
+      <CurrentTask />
+    </div>
+    <div class='card timer'>
+      <h2>Time Left:</h2>
+      <Timer />
+    </div>
   </div>
 </template>
 
 
 <script>
-import Timer from "./components/Timer.vue";
+import Timer from './components/Timer.vue';
+import CurrentTask from './components/CurrentTask.vue';
+
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    Timer
-  }
+    Timer,
+    CurrentTask,
+  },
 };
 </script>
 
@@ -21,8 +30,28 @@ export default {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   margin-top: 60px;
+  color: #263d42;
+}
+#app > h1 {
+  color: white;
+}
+.card {
+  border: none;
+  border-radius: 2px;
+  box-shadow: 2px 1px 2px black;
+  max-width: 500px;
+  min-width: 500px;
+  margin: 12px 0;
+  padding: 24px;
+  text-align: center;
+  background: white;
+}
+body {
+  background: #6d95b7;
 }
 </style>

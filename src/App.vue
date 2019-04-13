@@ -35,7 +35,7 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
-  color: #263d42;
+  color: #25283d;
 }
 #app > h1 {
   color: white;
@@ -45,13 +45,13 @@ export default {
   border-radius: 2px;
   box-shadow: 2px 1px 2px black;
   max-width: 500px;
-  min-width: 500px;
+  width: 100%;
   margin: 12px 0;
-  padding: 24px;
+  padding: 24px 0 24px;
   text-align: center;
   background: white;
 }
 body {
-  background: #6d95b7;
+  background: #263d42;
 }
 </style>

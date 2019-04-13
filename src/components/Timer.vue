@@ -1,7 +1,7 @@
 <template>
   <div class="timer">
     <h1>{{ timeDisplay }}</h1>
-    <button v-on:click="toggleCountdown">
+    <button v-on:click="toggleCountdown" class='start-stop-button'>
       <span v-if="intervalId">Pause</span>
       <span v-else>Start</span>
     </button>
@@ -59,13 +59,18 @@ export default {
 
 <style scoped>
 button {
-  background: #987284;
+  background: #e85f5c;
+  box-shadow: 1px 1px 1px gray;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 5px 8px;
-  margin: 0 5px;
+  margin: 0 8px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 120%;
+}
+button.start-stop-button {
+  background: #6D95B7;
 }
 </style>

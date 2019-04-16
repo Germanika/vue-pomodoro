@@ -12,6 +12,7 @@
 <script>
 import { setInterval, clearInterval } from 'timers';
 import timeFormatter from '../utils/timeFormatter';
+import notify from '../utils/notify';
 
 const defaultStartTime = 30 * 60;
 export default {
@@ -46,8 +47,7 @@ export default {
     },
     onOutOfTime() {
       this.setTimeLeft(this.startTime);
-      // TODO: something better than an alert!
-      alert("You're out of time!");
+      notify('Time to take a break!');
     },
     clearTimer() {
       clearInterval(this.intervalId);
@@ -71,6 +71,6 @@ button {
   font-size: 120%;
 }
 button.start-stop-button {
-  background: #6D95B7;
+  background: #263d42;
 }
 </style>
